@@ -1,0 +1,37 @@
+const Discord = require('discord.js');
+exports.run = (client, message, args, guild) => {
+    const embed = new Discord.RichEmbed()
+    .setColor(0x8D5AB2)
+    .setDescription(` :scales:  **[ iHax ] server, Current Hack Shop values!**
+    
+**•** **Buy Hacks**, by typing \`.hackshop\` or Win different **[ iHax ] Special events** to get one.
+    
+**[ SG ] Gill** **Market**
+**[**\`++50eur\` \`/1Month\` **]** - Get Fly Hack (You can fly everywhere in Starve ocean/jungle/winter)
+**[**\`++100eur\` \`/2Months\` **]** - Get Dragon Sword and Helmet Free everytime you join game
+**[**\`++100eur\` \`/4Months\`**]** - Get unlimited food 
+**[**\`++400eur\` \`/2Months\` **]** - Everyone dies who touches you(on/off command)
+**[**\`+900eur\` \`/6Months\`**]** - Live forever in Starve.io(you can't die)
+**[**\`99999eur\` \`/xtm\`**]** - Buy every hack 
+
+**Note: ** Talk with **Fire** For how to buy them , they are secret hacks and Need to agree with some terms first , you can talk with **[ \`Fire#0890\` ]** or **[ \`Jad#8063\` ]**
+`)
+    .setFooter(`-=[ ${message.guild.name} ] Hack Market=-`)
+        message.reply(`**[ :shopping_cart: ]  Hack** Market`, {
+        embed
+        });
+
+
+};
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['hshop', 'hackshop'],
+  permLevel: 0
+};
+
+exports.help = {
+  name: 'hackshop',
+  description: 'Access: iHax Servers',
+  usage: '!gshop'
+};
